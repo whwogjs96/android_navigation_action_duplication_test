@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_b_graph"
+    app:startDestination="@id/fragmentA">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.example.navigationtest.FragmentA"
+        tools:layout="@layout/fragment_a"
+        android:label="FragmentA" >
+        <action
+            android:id="@+id/action_next"
+            app:destination="@id/fragmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+        tools:layout="@layout/fragment_b"
+        android:name="com.example.navigationtest.FragmentB"
+        android:label="FragmentB" >
+
+        <action
+            android:id="@+id/action_move"
+            app:popUpTo="@id/fragmentA"/>
+    </fragment>
+</navigation>
